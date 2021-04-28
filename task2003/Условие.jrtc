@@ -1,3 +1,4 @@
+Составить цепочку слов
 taskKey="com.javarush.task.task20.task2003"\n\nЗнакомство с properties
 
 Метод main() считывает имя файла с консоли и заполняет runtimeStorage данными из файла.

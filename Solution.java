@@ -24,29 +24,27 @@ public class Solution {
         }
         String [] str = line.split(" ");
         StringBuilder result = getLine(str);
-//        System.out.println(result.toString());
 
     }
 
     public static StringBuilder getLine(String... words) {
-        StringBuilder [] stringBuilders = new StringBuilder[words.length];
+        List<String> arr = Arrays.asList(words);
+        List<String> arr_copy;
+        for (String s : arr) {
+            arr_copy.set()
+        }
+        arr_copy
+
         StringBuilder result = new StringBuilder();
         int i = 0;
-        for (String s : words) {
-            stringBuilders [i] = new StringBuilder(s);
-            i++;
-        }
-
-        Stream stream = Arrays.stream(stringBuilders);
+     //   Stream stream = Arrays.stream(arr.get());
      //   stream.forEach(System.out :: println);
 
-        List<StringBuilder> arr = Arrays.asList(stringBuilders);
-       // System.out.println(arr.get(0).charAt(arr.get(0).length()-1));
         for (int j = 0; j < arr.size(); j++) {
             for (int k = j+1; k < arr.size(); k++) {
-                if ((arr.get(j).charAt(arr.get(j).length()-1).equalsIgnoreCase(arr.get(k).charAt(0)))
-                        && ! arr.get(k).equals(arr.get(j+1))) {
-                    StringBuilder time = arr.get(j+1);
+                if ((arr.get(j).charAt(arr.get(j).length()-1) == ((arr.get(k).charAt(0)))
+                        && ! arr.get(k).equals(arr.get(j+1)))) {
+                    String time = arr.get(j+1);
                     arr.set((j+1), (arr.get(k)));
                     arr.set((k), time);
 

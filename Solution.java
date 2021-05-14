@@ -4,10 +4,7 @@ import java.io.*;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 import java.util.stream.Stream;
 
 /* 
@@ -24,26 +21,25 @@ public class Solution {
         }
         String [] str = line.split(" ");
         StringBuilder result = getLine(str);
-
+        System.out.println(result);
     }
 
     public static StringBuilder getLine(String... words) {
         List<String> arr = Arrays.asList(words);
-        List<String> arr_copy;
-        for (String s : arr) {
-            arr_copy.set()
+        List<String> arr_copy = new ArrayList<>();
+        // Collections.copy(arr_copy, arr);
+        for (int i = 0; i < words.length; i++) {
+            arr_copy.add(i, arr.get(i).toLowerCase());
         }
-        arr_copy
 
         StringBuilder result = new StringBuilder();
-        int i = 0;
-     //   Stream stream = Arrays.stream(arr.get());
-     //   stream.forEach(System.out :: println);
+        //   Stream stream = Arrays.stream(arr.get());
+        //   stream.forEach(System.out :: println);
 
         for (int j = 0; j < arr.size(); j++) {
             for (int k = j+1; k < arr.size(); k++) {
-                if ((arr.get(j).charAt(arr.get(j).length()-1) == ((arr.get(k).charAt(0)))
-                        && ! arr.get(k).equals(arr.get(j+1)))) {
+                if ((arr_copy.get(j).charAt(arr_copy.get(j).length()-1) == ((arr_copy.get(k).charAt(0)))
+                        && ! arr_copy.get(k).equals(arr_copy.get(j+1)))) {
                     String time = arr.get(j+1);
                     arr.set((j+1), (arr.get(k)));
                     arr.set((k), time);
@@ -51,16 +47,11 @@ public class Solution {
                 }
             }
         }
-        for (StringBuilder s : arr) {
-            System.out.println(s);
+        for (String s : arr) {
+            result = result.append(s).append(' ');
         }
 
-        for (int j = 0; j < words.length; j++) {
-            result.append(stringBuilders[j]).append(" ");
-        }
-
- //       System.out.println(result);
-        return result;
+        return result.delete(result.length()-1, result.length());
     }
 
 }

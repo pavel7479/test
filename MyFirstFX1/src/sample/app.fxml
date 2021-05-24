@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.HomeController">
+    <children>
+        <AnchorPane layoutX="-7.0" layoutY="131.0" prefHeight="269.0" prefWidth="709.0" style="-fx-background-color: #fafafa;">
+            <children>
+                <Label layoutX="233.0" layoutY="29.0" text="Hello World!">
+                    <font>
+                        <Font name="Arial Black" size="35.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="0.014218009478673022" proportional="false">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.2172500044107437" green="0.18700000643730164" blue="0.550000011920929" opacity="0.8370044231414795" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+            <ImageView fx:id="imageButtonHome" fitHeight="150.0" fitWidth="149.0" layoutX="281.0" layoutY="82.0">
+               <image>
+                  <Image url="@../../../../Desktop/iconfinder_Picture23_3289558.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+        <Label layoutX="224.0" layoutY="33.0" text="IT Proger">
+            <font>
+                <Font name="Arial Black" size="50.0" />
+            </font>
+            <textFill>
+                <LinearGradient endY="0.014218009478673022" proportional="false">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="1.0" green="1.0" blue="1.0" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+    </children>
+</AnchorPane>
